@@ -1,7 +1,6 @@
 import SocialMediaIcons from "../components/SocialMediaIcons";
 import useMediaQuery from "../hooks/useMediaQuery";
 import { motion } from "framer-motion";
-import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const Landing = ({ setSelectedPage }) => {
   const isAboveLarge = useMediaQuery("(min-width: 1060px)");
@@ -11,9 +10,7 @@ const Landing = ({ setSelectedPage }) => {
       className="md:flex md:justify-center md:items-center gap-16 md:h-full py-10"
     >
 
-      { }
       <div className="z-30 basis-2/5 mt-12 md:mt-32">
-        { }
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -33,7 +30,7 @@ const Landing = ({ setSelectedPage }) => {
           </p>
         </motion.div>
 
-        {/* CALL TO ACTIONS */}
+        { }
         <motion.div
           className="flex mt-5 justify-center md:justify-start"
           initial="hidden"
@@ -45,15 +42,14 @@ const Landing = ({ setSelectedPage }) => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <AnchorLink
-            className=" bg-gray-300 text-gray-600 rounded-md py-3 px-7 font-semibold
+          <a
+            className="bg-gray-300 text-gray-600 rounded-md py-3 px-7 font-semibold
               hover:bg-purple border border-solid hover:border-red-500 hover:text-white transition duration-500"
-            onClick={() => setSelectedPage("contact")}
-            href="#contact"
+            href="../assets/Resume.pdf"
+            download="Resume.pdf"
           >
             Download CV
-          </AnchorLink>
-
+          </a>
         </motion.div>
 
         <motion.div

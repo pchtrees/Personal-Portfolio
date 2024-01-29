@@ -1,4 +1,3 @@
-import LineGradient from "../components/LineGradient";
 import { motion } from "framer-motion";
 
 const container = {
@@ -17,7 +16,7 @@ const projectVariant = {
 
 const Project = ({ title, language, link }) => {
   const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500
-    bg-grey z-30 flex flex-col justify-center items-center text-center p-16 text-deep-blue`;
+    bg-purple z-30 flex flex-col justify-center items-center text-center p-16 text-white`;
   const projectTitle = title.split(" ").join("-").toLowerCase();
 
   return (
@@ -81,7 +80,10 @@ const Projects = () => {
           <Project title="Project 7" language="SASS & JS" link="https://pchtrees.github.io/Frontend-Mentor_theme-switcher/"/>
           <Project title="Project 8" language="CSS & JS" link="https://pchtrees.github.io/todoList" />
           <Project title="Project 9" language="CSS & JS" link="https://pchtrees.github.io/Tic-Tac-Toe/"/>
+          
+          {/* ROW 4 */}
           <Project title="Project 10" language="CSS & JS" link="https://pchtrees.github.io/calcu/"/>
+          <Project title="Project 11" language="ReactJS" link="https://pchtrees.github.io/calcu/"/>
         </motion.div>
       </div>
     </section>

@@ -26,7 +26,7 @@ const Project = ({ title, language, link }) => {
           <p className="mt-7 text-lg font-sans">{`${language}`}</p>
         </div>
         <img
-          src={`../assets/${projectTitle}.png `}
+          src={`./assets/${projectTitle}.png `}
           alt={projectTitle}
           style={{ width: "100%", height: "100%", objectFit: "cover" }}
         />

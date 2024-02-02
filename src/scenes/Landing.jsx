@@ -1,17 +1,15 @@
 import SocialMediaIcons from "../components/SocialMediaIcons";
 import useMediaQuery from "../hooks/useMediaQuery";
 import { motion } from "framer-motion";
-import AnchorLink from "react-anchor-link-smooth-scroll";
 
 
-const Landing = ({ setSelectedPage }) => {
+const Landing = ({  }) => {
   const isAboveLarge = useMediaQuery("(min-width: 1060px)");
   return (
     <section
       id="home"
       className="md:flex md:justify-center md:items-center gap-16 md:h-full py-10"
     >
-
       <div className="z-30 basis-2/5 mt-12 md:mt-32">
         <motion.div
           initial="hidden"
@@ -23,8 +21,8 @@ const Landing = ({ setSelectedPage }) => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <p className="text-7xl font-serif text-gray-800 z-10 mt-24 text-center md:text-start">
-            Pauline Capacia
+          <p className="text-6xl font-serif text-gray-800 z-10 mt-24 text-center md:text-start">
+            Pauline Capacia 
           </p>
 
           <p className="text-2xl text-gray-600 mt-3 font-playfair z-10 text-center md:text-start">

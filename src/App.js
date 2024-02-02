@@ -1,6 +1,5 @@
 import Navbar from "./scenes/Navbar";
 import Landing from "./scenes/Landing";
-import DotGroup from "./scenes/DotGroup";
 import Projects from "./scenes/Projects";
 import Contact from "./scenes/Contact";
 import Footer from "./scenes/Footer";
@@ -21,6 +20,7 @@ function App() {
       }
       if (window.scrollY !== 0) setIsTopOfPage(false);
     };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -33,12 +33,7 @@ function App() {
         setSelectedPage={setSelectedPage}
       />
       <div className="w-5/6 mx-auto md:h-full">
-        {isDesktop && (
-          <DotGroup
-            selectedPage={selectedPage}
-            setSelectedPage={setSelectedPage}
-          />
-        )}
+        {isDesktop }
         <motion.div
           margin="0 0 -200px 0"
           amount="all"
@@ -47,7 +42,6 @@ function App() {
           <Landing setSelectedPage={setSelectedPage} />
         </motion.div>
       </div>
-
       <div className="w-5/6 mx-auto ">
         <motion.div
           margin="0 0 -200px 0"
@@ -57,7 +51,6 @@ function App() {
           <Projects />
         </motion.div>
       </div>
-
       <div className="w-5/6 mx-auto md:h-full">
         <motion.div
           margin="0 0 -200px 0"

@@ -54,7 +54,7 @@ const Projects = () => {
           <p className="font-playfair font-semibold text-4xl text-slate-800">PROJECTS</p>
           <div className="flex justify-center mt-10 mb-5">
           </div>
-        </div>
+        </div> 
       </motion.div>
 
       {/* PROJECTS */}
@@ -83,9 +83,10 @@ const Projects = () => {
           
           {/* ROW 4 */}
           <Project title="Project 10" language="CSS & JS" link="https://pchtrees.github.io/calcu/"/>
-          <Project title="Project 11" language="ReactJS" link="https://pchtrees.github.io/calcu/"/>
-        </motion.div>
+          <Project title="Project 11" language="ReactJS" link="https://frontend-mentor-theme-switcher.pages.dev/"/>
+          </motion.div>
       </div>
+      
     </section>
   );
 };

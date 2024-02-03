@@ -26,35 +26,32 @@ function App() {
   }, []);
 
   return (
-    <div className="app">
+    <div className="app bg-deep-blue">
       <Navbar
         isTopOfPage={isTopOfPage}
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
       />
       <div className="w-5/6 mx-auto md:h-full">
-        {isDesktop }
-        <motion.div
-          margin="0 0 -200px 0"
-          amount="all"
-          onViewportEnter={() => setSelectedPage("home")}
-        >
-          <Landing setSelectedPage={setSelectedPage} />
-        </motion.div>
+        {isDesktop && (
+          <motion.div
+            onViewportEnter={() => setSelectedPage("home")}
+          >
+            <Landing setSelectedPage={setSelectedPage} />
+          </motion.div>
+        )}
       </div>
-      <div className="w-5/6 mx-auto ">
+      <div className="w-5/6 mx-auto">
         <motion.div
-          margin="0 0 -200px 0"
-          amount="all"
+
           onViewportEnter={() => setSelectedPage("projects")}
         >
           <Projects />
         </motion.div>
       </div>
-      <div className="w-5/6 mx-auto md:h-full">
+      <div className="w-5/6 mx-auto">
         <motion.div
-          margin="0 0 -200px 0"
-          amount="all"
+        
           onViewportEnter={() => setSelectedPage("contact")}
         >
           <Contact />

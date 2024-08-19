@@ -45,8 +45,8 @@ const Landing = ({  }) => {
           <a
             className="bg-gray-300 text-gray-600 rounded-md py-3 px-7 font-semibold
               hover:bg-purple border border-solid hover:border-red-500 hover:text-white transition duration-500"
-            href="../assets/Resume.pdf"
-            download="Resume.pdf"
+            href="../assets/my_resume.pdf"
+            download="my_resume.pdf"
           >
             Download CV
           </a>

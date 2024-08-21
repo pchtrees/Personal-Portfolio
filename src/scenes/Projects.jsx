@@ -14,7 +14,7 @@ const projectVariant = {
   visible: { opacity: 1, scale: 1 },
 };
 
-const Project = ({ title, language, link }) => {
+const Project = ({ title, projName, language, link }) => {
   const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500
     bg-purple z-30 flex flex-col justify-center items-center text-center p-16 text-white`;
   const projectTitle = title.split(" ").join("-").toLowerCase();
@@ -23,10 +23,11 @@ const Project = ({ title, language, link }) => {
     <motion.div variants={projectVariant} className="relative">
       <a href={link} target="_blank" rel="noopener noreferrer" className="block w-full h-full">
         <div className={overlayStyles}>
+        <p className="text-lg font-semibold mb-4">{`${projName}`}</p> 
           <p className="mt-7 text-lg font-sans">{`${language}`}</p>
         </div>
         <img
-          src={`./assets/${projectTitle}.png `}
+          src={`${process.env.PUBLIC_URL}/assets/${projectTitle}.png`}
           alt={projectTitle}
           style={{ width: "100%", height: "100%", objectFit: "cover" }}
         />
@@ -67,26 +68,40 @@ const Projects = () => {
           viewport={{ once: true, amount: 0.2 }}
         >
           {/* ROW 1 */}
-          <Project title="Project 1" language="HTML & CSS" link="https://pchtrees.github.io/Frontend-Mentor_huddle_landing_page/" />
-          <Project title="Project 2" language="HTML & Tailwind" link="https://pchtrees.github.io/appointmentCalendar/"/>
-          <Project title="Project 3" language="HTML & CSS" link=" https://pchtrees.github.io/Product-Landing-Page/"/>
+          <Project title="Project 1" projName="Frontend Mentor Huddle Landing Page" language="CSS" link="https://pchtrees.github.io/Frontend-Mentor_huddle_landing_page/" />
+          <Project title="Project 2" projName="" language="Tailwind" link="https://pchtrees.github.io/appointmentCalendar/"/>
+          <Project title="Project 3" projName="" language="CSS" link=" https://pchtrees.github.io/Product-Landing-Page/"/>
 
           {/* ROW 2 */}
-          <Project title="Project 4" language="HTML & CSS" link="https://pchtrees.github.io/Python-Documentation/"/>
-          <Project title="Project 5" language="HTML & CSS" link="https://pchtrees.github.io/Museum-Feedback-Form/"/>
-          <Project title="Project 6" language="HTML & CSS" link="https://pchtrees.github.io/CSSPortfolio/"/>
+          <Project title="Project 4" projName="" language="CSS" link="https://pchtrees.github.io/Python-Documentation/"/>
+          <Project title="Project 5" projName="" language="CSS" link="https://pchtrees.github.io/Museum-Feedback-Form/"/>
+          <Project title="Project 6" projName="" language="CSS" link="https://pchtrees.github.io/CSSPortfolio/"/>
 
           {/* ROW 3 */}
-          <Project title="Project 7" language="HTML, SASS & JS" link="https://pchtrees.github.io/Frontend-Mentor_theme-switcher/"/>
-          <Project title="Project 8" language="HTML, CSS & JS" link="https://pchtrees.github.io/todoList" />
-          <Project title="Project 9" language="HTML, CSS & JS" link="https://pchtrees.github.io/Tic-Tac-Toe/"/>
+          <Project title="Project 7" projName="" language="SASS & JS" link="https://pchtrees.github.io/Frontend-Mentor_theme-switcher/"/>
+          <Project title="Project 8" projName="" language="CSS & JS" link="https://pchtrees.github.io/todoList" />
+          <Project title="Project 9" projName="" language="CSS & JS" link="https://pchtrees.github.io/Tic-Tac-Toe/"/>
           
           {/* ROW 4 */}
-          <Project title="Project 10" language="HTML, CSS & JS" link="https://pchtrees.github.io/calcu/"/>
-          <Project title="Project 11" language="HTML & ReactJS" link="https://pchtrees.github.io/Personal-Portfolio/"/>
+          <Project title="Project 11" projName="" language="ReactJS" link="https://pchtrees.github.io/Personal-Portfolio/"/>
+          <div className="text-end">
+          <a
+            className="hover:opacity-50 transition duration-500"
+            href="https://github.com/pchtrees"
+          >
+          </a>
+          </div>
           </motion.div>
-      </div>
-      
+        </div>
+              {/* See More Button */}
+              <div className="text-center mt-10">
+          <a
+            href="https://github.com/pchtrees"
+            className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition duration-300"
+          >
+            See More Projects
+          </a>
+        </div>
     </section>
   );
 };

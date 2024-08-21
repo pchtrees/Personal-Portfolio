@@ -1,3 +1,7 @@
+import linkedinIcon from '../assets/linkedin.png';
+import facebookIcon from '../assets/facebook.png';
+import githubIcon from '../assets/github.png';
+
 const SocialMediaIcons = () => {
   return (
     <div className="flex justify-center md:justify-start my-10 gap-7">
@@ -7,7 +11,7 @@ const SocialMediaIcons = () => {
         target="_blank"
         rel="noreferrer"
       >
-        <img alt="linkedin-link" src="./assets/linkedin.png" />
+        <img alt="linkedin-link" src={linkedinIcon} />
       </a>
       <a
         className="hover:opacity-50 transition duration-500"
@@ -15,7 +19,7 @@ const SocialMediaIcons = () => {
         target="_blank"
         rel="noreferrer"
       >
-        <img alt="facebook-link" src="./assets/facebook.png" />
+        <img alt="facebook-link" src={facebookIcon} />
       </a>
       <a
         className="hover:opacity-50 transition duration-500"
@@ -23,9 +27,8 @@ const SocialMediaIcons = () => {
         target="_blank"
         rel="noreferrer"
       >
-        <img alt="github-link" src="./assets/github.png" />
+        <img alt="github-link" src={githubIcon} />
       </a>
-
     </div>
   );
 };

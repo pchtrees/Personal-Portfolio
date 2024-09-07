@@ -68,19 +68,19 @@ const Projects = () => {
           viewport={{ once: true, amount: 0.2 }}
         >
           {/* ROW 1 */}
-          <Project title="Project 1" projName="Frontend Mentor Huddle Landing Page" language="CSS" link="https://pchtrees.github.io/Frontend-Mentor_huddle_landing_page/" />
-          <Project title="Project 2" projName="" language="Tailwind" link="https://pchtrees.github.io/appointmentCalendar/"/>
-          <Project title="Project 3" projName="" language="CSS" link=" https://pchtrees.github.io/Product-Landing-Page/"/>
+          <Project title="Project 1" projName="" language="CSS" link="" />
+          <Project title="Project 2" projName="" language="" link=""/>
+          <Project title="Project 3" projName="Personal Portfolio" language="React JS" link=" https://pchtrees.github.io/Product-Landing-Page/"/>
 
           {/* ROW 2 */}
-          <Project title="Project 4" projName="" language="CSS" link="https://pchtrees.github.io/Python-Documentation/"/>
-          <Project title="Project 5" projName="" language="CSS" link="https://pchtrees.github.io/Museum-Feedback-Form/"/>
-          <Project title="Project 6" projName="" language="CSS" link="https://pchtrees.github.io/CSSPortfolio/"/>
+          <Project title="Project 4" projName="Frontend Mentor Theme Switcher" language="SASS & JavaScript" link="https://pchtrees.github.io/Frontend-Mentor_theme-switcher/"/>
+          <Project title="Project 5" projName="Frontend Mentor Huddle Landing Page" language="SASS & JavaScript" link="https://pchtrees.github.io/Frontend-Mentor_huddle_landing_page/"/>
+          <Project title="Project 6" projName="" language="Tailwind" link="https://pchtrees.github.io/appointmentCalendar/"/>
 
           {/* ROW 3 */}
-          <Project title="Project 7" projName="" language="SASS & JS" link="https://pchtrees.github.io/Frontend-Mentor_theme-switcher/"/>
-          <Project title="Project 8" projName="" language="CSS & JS" link="https://pchtrees.github.io/todoList" />
-          <Project title="Project 9" projName="" language="CSS & JS" link="https://pchtrees.github.io/Tic-Tac-Toe/"/>
+          <Project title="Project 7" projName="" language="" link=""/>
+          <Project title="Project 8" projName="" language="CSS & JavaScript" link="https://pchtrees.github.io/todoList" />
+          <Project title="Project 9" projName="" language="CSS & JavaScript" link="https://pchtrees.github.io/Tic-Tac-Toe/"/>
           
           {/* ROW 4 */}
           <Project title="Project 11" projName="" language="ReactJS" link="https://pchtrees.github.io/Personal-Portfolio/"/>

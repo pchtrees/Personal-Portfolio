@@ -1,14 +1,13 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import useMediaQuery from "../hooks/useMediaQuery";
-
 
 const Link = ({ page, selectedPage, setSelectedPage }) => {
   const lowerCasePage = page.toLowerCase();
   return (
     <AnchorLink
       className={`${
-        selectedPage === lowerCasePage ? " text-lime-950" : ""
+        selectedPage === lowerCasePage ? "text-lime-950" : ""
       } hover:text-lime-950 transition duration-500`}
       href={`#${lowerCasePage}`}
       onClick={() => setSelectedPage(lowerCasePage)}
@@ -23,10 +22,26 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
   const isDesktop = useMediaQuery("(min-width: 768px)");
   const navbarBackground = isTopOfPage ? "" : "bg-slate-300";
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = document.querySelectorAll("section");
+      sections.forEach((section) => {
+        const top = section.offsetTop - 80; // Adjust for navbar height
+        const bottom = top + section.offsetHeight;
+        if (window.scrollY >= top && window.scrollY <= bottom) {
+          setSelectedPage(section.getAttribute("id"));
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [setSelectedPage]);
+
   return (
     <nav className={`${navbarBackground} z-40 w-full fixed top-0 py-6`}>
       <div className="flex items-center justify-between mx-auto w-5/6">
-        <h4 className="font-playfair text-4xl font-bold text-emerald-950">PeachTrees</h4>
+        <h4 className="font-serif text-2xl font-bold text-emerald-950">PeachTrees</h4>
 
         {/* DESKTOP NAV */}
         {isDesktop ? (

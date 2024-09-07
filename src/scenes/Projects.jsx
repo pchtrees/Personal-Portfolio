@@ -68,39 +68,21 @@ const Projects = () => {
           viewport={{ once: true, amount: 0.2 }}
         >
           {/* ROW 1 */}
-          <Project title="Project 1" projName="" language="CSS" link="" />
-          <Project title="Project 2" projName="" language="" link=""/>
-          <Project title="Project 3" projName="Personal Portfolio" language="React JS" link=" https://pchtrees.github.io/Product-Landing-Page/"/>
+          <Project title="Project 1" projName="Human Resources Information System" language="Laravel & Vue Js & TailwindCSS" link="" />
+          <Project title="Project 2" projName="ChatGPT 3" language="React Js & CSS" link=""/>
+          <Project title="Project 3" projName="Personal Portfolio" language="React Js & TailwindCSS" link=" https://pchtrees.github.io/Product-Landing-Page/"/>
 
           {/* ROW 2 */}
-          <Project title="Project 4" projName="Frontend Mentor Theme Switcher" language="SASS & JavaScript" link="https://pchtrees.github.io/Frontend-Mentor_theme-switcher/"/>
-          <Project title="Project 5" projName="Frontend Mentor Huddle Landing Page" language="SASS & JavaScript" link="https://pchtrees.github.io/Frontend-Mentor_huddle_landing_page/"/>
-          <Project title="Project 6" projName="" language="Tailwind" link="https://pchtrees.github.io/appointmentCalendar/"/>
+          <Project title="Project 4" projName="Frontend Mentor Theme Switcher" language="JavaScript & SASS" link="https://pchtrees.github.io/Frontend-Mentor_theme-switcher/"/>
+          <Project title="Project 5" projName="Frontend Mentor Huddle Landing Page" language="JavaScript & SASS" link="https://pchtrees.github.io/Frontend-Mentor_huddle_landing_page/"/>
+          <Project title="Project 6" projName="Museum Appointment Calendar" language="TailwindCSS" link="https://pchtrees.github.io/appointmentCalendar/"/>
 
           {/* ROW 3 */}
-          <Project title="Project 7" projName="" language="" link=""/>
-          <Project title="Project 8" projName="" language="CSS & JavaScript" link="https://pchtrees.github.io/todoList" />
-          <Project title="Project 9" projName="" language="CSS & JavaScript" link="https://pchtrees.github.io/Tic-Tac-Toe/"/>
-          
-          {/* ROW 4 */}
-          <Project title="Project 11" projName="" language="ReactJS" link="https://pchtrees.github.io/Personal-Portfolio/"/>
-          <div className="text-end">
-          <a
-            className="hover:opacity-50 transition duration-500"
-            href="https://github.com/pchtrees"
-          >
-          </a>
-          </div>
+          <Project title="Project 7" projName="Simple Calculator App" language="JavaScript & CSS" link=""/>
+          <Project title="Project 8" projName="To Do List App" language="JavaScript & CSS" link="https://pchtrees.github.io/todoList" />
+          <Project title="Project 9" projName="Tic Tac Toe App" language="JavaScript & CSS" link="https://pchtrees.github.io/Tic-Tac-Toe/"/>
+
           </motion.div>
-        </div>
-              {/* See More Button */}
-              <div className="text-center mt-10">
-          <a
-            href="https://github.com/pchtrees"
-            className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition duration-300"
-          >
-            See More Projects
-          </a>
         </div>
     </section>
   );

@@ -8,9 +8,9 @@ const Landing = ({  }) => {
   return (
     <section
       id="home"
-      className="md:flex md:justify-center md:items-center gap-16 md:h-full py-10"
+      className="md:flex md:justify-center md:items-center gap-16  md:h-full py-10"
     >
-      <div className="z-30 basis-2/5 mt-12 md:mt-32">
+      <div className="z-30 basis-2/5 mt-12 md:mt-48 mb-32">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -21,11 +21,11 @@ const Landing = ({  }) => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <p className="text-6xl font-serif text-gray-800 z-10 mt-24 text-center md:text-start">
+          <p className="text-7xl font-serif text-gray-800 z-10 mt-24 text-center md:text-start">
             Pauline Capacia 
           </p>
 
-          <p className="text-2xl text-gray-600 mt-3 font-playfair z-10 text-center md:text-start">
+          <p className="text-2xl text-gray-600 mt-3 font-playfair z-10 text-center md:text-start mb-8">
             - Frontend Dev 
           </p>
         </motion.div>
@@ -43,7 +43,7 @@ const Landing = ({  }) => {
           }}
         >
           <a
-            className="bg-gray-300 text-gray-600 rounded-md py-3 px-7 font-semibold
+            className="bg-gray-300 text-gray-600 rounded-md py-3 px-7 font-semibold 
               hover:bg-purple border border-solid hover:border-red-500 hover:text-white transition duration-500"
             href="../assets/my_resume.pdf"
             download="my_resume.pdf"
